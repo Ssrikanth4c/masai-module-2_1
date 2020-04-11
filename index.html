@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog API</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bangers&display=swap" rel="stylesheet"> 
+    <style>
+        body{
+          background: #9E9E9E;          
+        }
+        #h1{
+          font-family: 'Bangers', cursive;
+          
+          
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+      <!--Navigatioin 
+          img log and Title -->
+      <div class="row text-center bg bg-primary">
+          
+        <div class="col-4 ">
+            <img src="resources/logo.png" class="img" alt="logo">
+          </div>
+        
+          <div class="col-8 text-center  p-5">
+          <h1 id= 'h1' class='display-1 pt-5 text-center'>The Dog People</h1>
+        </div>
+
+      </div>  
+      <!-- Get random dog images -->
+      <div class="container  mt-2">
+        <h3 class="text-center font-weight-bold text-danger">Get Random Images of 3 Different Breeds</h3>
+        <div class="row ">
+          
+          <div class="col-lg-1 col-mg-2 col-2 align-self-center " onclick="getRandom()">
+            <img src="resources/palm.png" width='32' height="32" alt="palm">
+          </div>
+
+          <div class="col-lg-10 col-mg-8 col-8 border border-primary " id="randomDisplay"></div>
+
+          <div class="col-lg-1 col-mg-2 col-2 align-self-center " onclick="getRandom()">
+            <img src="resources/palm.png" class="ml-4" width='32' height="32" alt="palm">
+          </div>
+        </div>
+      </div>
+
+      <!-- Browse by breed -->
+      <div class="row justify-content-center mt-3">
+          <div class="col-lg-3 text-center col-md-4 col-6">
+           <label for="browse" class="lead pt-1 font-weight-bold">Browse by Breed</label> 
+          </div>
+          
+          <div class="col-lg-3 col-md-4 col-6">
+              <select name="selectByBreed" class="form-control bg-secondary text-warning text-uppercase font-weight-bold text-center" id="byBreed">
+                <option value="" >Choose Breed</option>
+              </select>
+          </div>
+          <div class="col-lg-3 col-md-4 col-4">
+            <button class= 'btn btn-success btn-block ' id='getBtn' >Get Images</button>
+          </div>
+      </div>
+      
+      <div class="row" id="res">
+      </div>
+    </div>
+</body>
+<script src="script.js" ></script>
+</html>
